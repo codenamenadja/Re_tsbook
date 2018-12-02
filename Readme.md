@@ -6,6 +6,7 @@
         -다중상황에 대비해 설정 변경
             -ts-config를 이용한 컴파일 후 트랜스파일 작업만 테스크러너 ctl shift b
             -lint 와 ts-node는 npm에서 lint-all 과 ts-node01... 방식으로 스크립트 실행
+    
     2.01>mapNset
         -map객체는 키값이 유일한 객체를 생성하기 위한 취지
         -set객체는 고유한 값만을 가진 배열을 만들기 위한 취지
@@ -14,7 +15,16 @@
         -console.log(map객체)의 결과는 Map {'key_1' => value, 'key_2' => value} 의 형태로 나온다.
         -console.log(set객체)의 결과는 Set {val, val, val} 의 형태로 나온다.
         - 이부분의 공통점은 배열은 기본적으로 객체이다. 인덱스 속성에 값이 연결되있는 것이고 해당 배열객체의 인덱스 수에 따라 arr.length의 값이 정해진다.
-    
+
+    3.02>destructuring
+        -null객체는 정확히 비어있는 {}상태를 의미한다. 타입은 object이며 인터페이스가 없다.
+        -const a = ""; 이것은 null 이 아니다. string타입의 value로 정해진 null객체라고 보는 것이 맞기 때문에, 타입은 string. null객체와 가장 유사한 형태이다.
+        -undefined는 할당되지 않음을 의미하므로 초기화 하지 않은 상태와 같다 혹은, let의 선언변수를 undefined로 할당해 버렸을때. 하지만
+        타입을 정해놨다면, undefined로 재할당 될 수 없다.
+        -destructuring은 길게 표기해야하는 번거로운 작업을 간단하게 줄여주는데 큰 용도가 있다. (조건) ? 참 : 거짓 의 한문장 조건문과 결합해도 좋고, 예시에 놓은 것처럼
+            -{ name : renameA = "name부재시 할당값", age : renameB = (obj.age) ? obj.age : "부재시 할당값" } = obj{name:"junehan", age:28}
+            -이렇게 풀 수 있다. 첫번째 매개변수초기할당하는 방식을 적용하면 간단하게 처리하지만 null값을 핸들링하기 위해서를 추가해야한다면, 두번째 방법을 쓸 수 있다. 물론 애초에 user-input측 로직에서 null을 입력할 시 undefined로 전송한다는 처리를 하면 문제는 없다.
+
     -------------boarder-------------line----------------------
     
     -- tsconfig basic options에 대한 이해 --

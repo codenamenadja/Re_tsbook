@@ -2,7 +2,10 @@
         -ctl + shift + p => list중 test시 TSsrc폴더 안의 ts파일 tslint로 검사 후 npm test까지 묶어서 ts-node로 출력
         -ctl + shift + b => TSsrc 안의 폴더 모든 ts파일을 js화 해서 src 폴더안에 생성(d.ts, d.ts.map 생성)
         -npm에 있는 dependency모듈을 사용하려면 npm 명령어 내에서만 가능하기 때문에, task안에 npm명령어 이용.
-            -ts-lint는 현재 글로벌로 설치되어있기 때문에, 해당 프로젝트 npm에서만 관여할 수 있는 것이 아니라 바로 사용가능.   
+            -ts-lint는 현재 글로벌로 설치되어있기 때문에, 해당 프로젝트 npm에서만 관여할 수 있는 것이 아니라 바로 사용가능.
+        -다중상황에 대비해 설정 변경
+            -ts-config를 이용한 컴파일 후 트랜스파일 작업만 테스크러너 ctl shift b
+            -lint 와 ts-node는 npm에서 lint-all 과 ts-node01... 방식으로 스크립트 실행
     2.01>mapNset
         -map객체는 키값이 유일한 객체를 생성하기 위한 취지
         -set객체는 고유한 값만을 가진 배열을 만들기 위한 취지

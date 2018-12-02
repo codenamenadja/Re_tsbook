@@ -4,7 +4,9 @@
   "description": "typescript prac-works",
   "main": "index.js",
   "scripts": {
-    "test": "ts-node ./TSsrc/**/*"
+    "lint-all": "tslint ./TSsrc/**/**/*",
+    "ts-node01": "ts-node ./TSsrc/ES6/01_mapNset/*",
+    "ts-node02": "ts-node ./TSsrc/ES6/02_destructuringNspread/*"
   },
   "author": "junehna",
   "license": "ISC",

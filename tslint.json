@@ -4,6 +4,6 @@
         "tslint:recommended"
     ],
     "jsRules": {},
-    "rules": {"no-console":false,"no-trailing-whitespace":false},
+    "rules": {"no-console":false,"no-trailing-whitespace":false, "no-construct":false, "interface-name":false, "max-classes-per-file":false},
     "rulesDirectory": []
 }

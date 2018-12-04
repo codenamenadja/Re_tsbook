@@ -110,3 +110,21 @@
                 //  각 파일을 개별 모듈로 변환(transpile)합니다. 'ts.transpileModule'과 유사합니다.(default = false)
             }
         }
+
+        -----
+        0. special
+            1.why not to use New String()
+                -string을 new String으로 선언할 시에 단순한 문자 데이터가 들어가는 일에 비해 많은 리소스, 즉 객체의 형태로 전달되어 온다.
+                -거기엔 프로토타입 메서드들이 delagation 된다. 즉, new로 선언하는 일은 객체를 돌려받는다. 
+                    const str = new String("sample")에서
+                    (str.__proto__ === String)
+                -"", 즉 string literal로 값을 할당하면 strObj.constructor.prototype.valueOf() 로 추정되는 메서드가 호출되어 반환된 원형 문자열을 돌려받는다.
+                    String.prototype.valueOf === strObj.valueOf: true
+                    String.valueOf === strObj.valueOf: false
+                    String.valueOf === Object.constructor.prototype.valueO: true
+                    String.constructor === Function: true
+                    String.constructor === Object.constructor: true
+                    Object.valueOf === Function.prototype.valueOf: true
+                    Object가 String을 만들고 String이 new String을 가능하게 한다.
+                -자바스크립트는 원시자료형이라는 타입을 만들어야했고, 그에 따라 반환하는 것이 객체의 형태에서 벗어난 것이어야 한다는 이야기이다.
+                -객체의 형태로 존재할때 String의 메서드에 new String의 객체가 prototype으로 수정하는 가능성을 방지.

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint-all": "tslint ./TSsrc/**/**/*",
+    "ts-node00": "ts-node ./TSsrc/ES6/00_special/*",
     "ts-node01": "ts-node ./TSsrc/ES6/01_mapNset/*",
     "ts-node02": "ts-node ./TSsrc/ES6/02_destructuringNspread/*"
   },

@@ -21,14 +21,12 @@ const sampleEmptyVal: Iprofile = {
 };
 
 function printProfile_declaration(obj: Iprofile): void {
-    let name: string;
-    let nationality: string;
 
-    name = (obj.name === undefined || obj.name == null) ? "anonymous" : obj.name;
-    nationality = (obj.nationality === undefined || obj.nationality == null) ? "god's Son?" : obj.nationality;
-
-    console.log(`name is ${name}.`);
-    console.log(`nationality is ${nationality}.`);
+    // name = (obj.name === undefined || obj.name == null) ? "anonymous" : obj.name;
+    // nationality = (obj.nationality === undefined || obj.nationality == null) ? "god's Son?" : obj.nationality;
+    const { name, nationality } = obj;
+    console.log(`name is ${name ? name : "no name :("}.`);
+    console.log(`nationality is ${nationality ? nationality : "no nationality! :("}`);
 }
 
 const printProfileDestructuring = (obj: Iprofile): void => {

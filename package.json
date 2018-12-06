@@ -7,7 +7,9 @@
     "lint-all": "tslint ./TSsrc/**/**/*",
     "ts-node00": "ts-node ./TSsrc/ES6/00_special/*",
     "ts-node01": "ts-node ./TSsrc/ES6/01_mapNset/*",
-    "ts-node02": "ts-node ./TSsrc/ES6/02_destructuringNspread/*"
+    "ts-node02A": "ts-node ./TSsrc/ES6/02_destructuringNspread/destructuringA.ts",
+    "ts-node02B": "ts-node ./TSsrc/ES6/02_destructuringNspread/destructuringB.ts",
+    "ts-node03":  "ts-node ././TSsrc/ES6/03_class/*"
   },
   "author": "junehna",
   "license": "ISC",

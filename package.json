@@ -9,7 +9,8 @@
     "ts-node01": "ts-node ./TSsrc/ES6/01_mapNset/*",
     "ts-node02A": "ts-node ./TSsrc/ES6/02_destructuringNspread/destructuringA.ts",
     "ts-node02B": "ts-node ./TSsrc/ES6/02_destructuringNspread/destructuringB.ts",
-    "ts-node03":  "ts-node ././TSsrc/ES6/03_class/*"
+    "ts-node03A":  "ts-node ./TSsrc/ES6/03_OOBJclass/OObjclassA.ts",
+    "ts-node03B":  "ts-node ./TSsrc/ES6/03_OOBJclass/OObjclassB.ts"
   },
   "author": "junehna",
   "license": "ISC",

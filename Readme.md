@@ -32,7 +32,24 @@
         로 함수 타입이 매개변수의 인터페이스를 불러와 단계적으로 정리된 모습을 보여주어 식별이 분명해진다.
         -인터페이스는 구현해야할 조건을 계획해놓은, 주로 객체형태의 복합성을(class포함하여 객체의 키가 메서드가 되기도 하고 값이 되기도 할 수 있기 때문에) 위해 쓰여지고, type은 functiontype이나 []객체의 복잡한 index types를 미리 정의하기에 편리하다. 
         -짧게 말하면 인터페이스는 로직구현부를 포함한 객체를 위하고 type은 로직구현부 자체를 묘사하거나 복잡한 배열을 묘사하기 좋다.
-
+    4.01>OObjClassA
+        -class FirstClass implements IForParentClass생성
+        -IForParentClass {showUserData():void;} 해당 키만이 public하면서 static하지 않고 전이되는 prototype메서드.
+        -instance.construtor.prototype의 메서드에는 접근가능
+         instance.constructor.publicstaticMethod에는 접근불가
+         FirstClass.publicStaticInClass()로만 접근가능.
+         -prototype에 할당되는 메서드의 내부에 constructor만이 가지는 this가 있어도 컴파일에 문제가 없도록 설정이 되어있다.
+         하지만 정말 까다롭게 검사한다면 명시적으로 this는 FirstClass이기때문에 오류가 나야할 것 같지만, 이것은 class라는 것이 가지는 특질을 prototype이 이해하고 있다는 것으로 판단됨.
+    4.02>OOBJclassB
+        -typescript는 javascript의 superset이기 때문에, es모듈 시스템을 기본 모듈시스템으로 책정하고 있다. ts를 javascript로 컴파일 할때 모듈시스템을 인식시켜서 파일간의 의존성을 처리 할 수 있다는 의미이다. 하지만 javascript는 es모듈을 지원받긴 하지만, node 명령어를 통해 처리해도 nodejs가 js파일에 대해 es모듈을 덧붙이는 인터프리터(컴파일을 진행하는)는 아니기 때문에, 브라우저에서만 (v6엔진에 붙여지는 ecma-script polyfill등을 통해)사용이 가능하다.
+        -오프라인 상태에서 tsnode의 라는 패키지가 처리하는 node 명령어로 치환하는 작업에서, tsB가 tsA의 자원을 불러와 실행할 때, tsA의 문서 전체를 실행한 후에 불러오는 작업을 하고 있다. 그것은 아마 export가 어디서 끝나는지 미리 확인할 수 없다는점과 angular같은 프레임워크 module.ts에서 서로의 의존성이나 그에 대한 명세같은 것을 미리 규약에 정해놓고 실행하는 것이 아니기 때문에 일어나는 것으로 추측하고 있다.
+        -base파일이 index에서 실행되는 문서이며, 특정 환경에서 실행 되는 subsetA, subsetB의 자원을 불러 온다해도 성숙한 웹프레임워크를 사용한다면, 불러오는 과정에 파일을 전부다 실행하는 일은 없을것이다.
+            -그러나 자원을 불러오기위한 의존성에따른 파일구조 설계에서는 status에 저장되는(로그인정보유지) 실행부, 혹은 선언부는 class를 불러오는 파일과 별도로 관리하는 것이 좋을듯 하다.
+            userBuildClass파일은 class만 보관하고, userBuildInterFace파일은 타입과 인터페이스만 보관해서
+            userBuildLogic.js =(호출)=> userBuildClass.js =(참조)=> userBuildInterfaces.js
+            와 같은 구조로 분명하게 나눠주는 것이 맞는 그림이라고 생각하자.
+            -MainClass에서 발생 시간 로그 등의 정보를 저장하는 역할을 하고
+            userBuild 및 boardBuild 클래스는 MainClass를 상속받아 다형성의 메서드나 속성을 갖고, 댓글Class도 있어야하는데 상속받는 것을 통해 메모리 사용량을 줄일 수 있는 설계를 하는것이 중요하다. 복잡한 일이다. 프레임워크는 자신들이 제공하는 리소스에서 어떤식으로 주제와 기능에 따라 분할할지 정도는 권고해주고 있으니, class관련 문제만 해결하면 꽤 잘 설계된 편으로 생각될만한 코드가 아닐까 생각해본다. 
     -------------boarder-------------line----------------------
     
     -- tsconfig basic options에 대한 이해 --

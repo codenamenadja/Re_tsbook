@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint-all": "tslint ./TSsrc/**/**/*",
-    "ts-node00": "ts-node ./TSsrc/ES6/00_special/*",
+    "ts-node00A": "ts-node ./TSsrc/ES6/00_special/01_whynotNewStr.ts",
+    "ts-node00B": "ts-node ./TSsrc/ES6/00_special/02_functionalPrograming.ts", 
     "ts-node01": "ts-node ./TSsrc/ES6/01_mapNset/*",
     "ts-node02A": "ts-node ./TSsrc/ES6/02_destructuringNspread/destructuringA.ts",
     "ts-node02B": "ts-node ./TSsrc/ES6/02_destructuringNspread/destructuringB.ts",

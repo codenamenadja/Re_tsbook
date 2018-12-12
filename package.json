@@ -6,17 +6,20 @@
   "scripts": {
     "lint-all": "tslint ./TSsrc/**/**/*",
     "ts-node00A": "ts-node ./TSsrc/ES6/00_special/01_whynotNewStr.ts",
-    "ts-node00B": "ts-node ./TSsrc/ES6/00_special/02_functionalPrograming.ts", 
+    "ts-node00B": "ts-node ./TSsrc/ES6/00_special/02_functionalPrograming.ts",
     "ts-node01": "ts-node ./TSsrc/ES6/01_mapNset/*",
     "ts-node02A": "ts-node ./TSsrc/ES6/02_destructuringNspread/destructuringA.ts",
     "ts-node02B": "ts-node ./TSsrc/ES6/02_destructuringNspread/destructuringB.ts",
-    "ts-node03A":  "ts-node ./TSsrc/ES6/03_OOBJclass/OObjclassA.ts",
-    "ts-node03B":  "ts-node ./TSsrc/ES6/03_OOBJclass/OObjclassB.ts"
+    "ts-node02C": "ts-node ./TSsrc/ES6/02_destructuringNspread/des_res.ts",
+    "ts-node03A": "ts-node ./TSsrc/ES6/03_OOBJclass/OObjclassA.ts",
+    "ts-node03B": "ts-node ./TSsrc/ES6/03_OOBJclass/OObjclassB.ts"
   },
   "author": "junehna",
   "license": "ISC",
   "dependencies": {
+    "@types/lodash": "^4.14.118",
     "@types/node": "^10.12.10",
+    "lodash": "^4.17.11",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.6"
   }

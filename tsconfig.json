@@ -13,8 +13,8 @@
     "sourceMap": true,                     /* Generates corresponding '.map' file. */
     // 상위 3항목 오픈시 개발자 도구에서 타입스크립트 자체를 디버깅 할 수 있음.
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
-    "outDir": "./src",                        /* Redirect output structure to the directory. */
-    "rootDir": "./TSsrc",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "outDir": "./debug/src",                        /* Redirect output structure to the directory. */
+    "rootDir": "./debug/ts-src",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "composite": true,                     /* Enable project compilation */
     // "removeComments": true,                /* Do not emit comments to output. */
     // "noEmit": true,                        /* Do not emit outputs. */

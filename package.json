@@ -13,7 +13,9 @@
     "ts-node02B": "ts-node ./TSsrc/ES6/02_destructuringNspread/destructuringB.ts",
     "ts-node02C": "ts-node ./TSsrc/ES6/02_destructuringNspread/des_res.ts",
     "ts-node03A": "ts-node ./TSsrc/ES6/03_OOBJclass/OObjclassA.ts",
-    "ts-node03B": "ts-node ./TSsrc/ES6/03_OOBJclass/OObjclassB.ts"
+    "ts-node03B": "ts-node ./TSsrc/ES6/03_OOBJclass/OObjclassB.ts",
+    "ts-node04A":"ts-node ./TSsrc/ES6/04_accessModifier/a.ts",
+    "ts-node04B":"ts-node ./TSsrc/ES6/04_accessModifier/b.ts"
   },
   "author": "junehna",
   "license": "ISC",

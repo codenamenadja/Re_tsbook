@@ -16,7 +16,8 @@
     "ts-node03B": "ts-node ./TSsrc/ES6/03_OOBJclass/OObjclassB.ts",
     "ts-node04A":"ts-node ./TSsrc/ES6/04_accessModifier/a.ts",
     "ts-node04B":"ts-node ./TSsrc/ES6/04_accessModifier/b.ts",
-    "ts-node05A":"ts-node ./TSsrc/ES6/05_abstractClass/a.ts"
+    "ts-node05A":"ts-node ./TSsrc/ES6/05_abstractClass/a.ts",
+    "ts-node06A":"ts-node ./TSsrc/ES6/06_module/b.ts"
   },
   "author": "junehna",
   "license": "ISC",

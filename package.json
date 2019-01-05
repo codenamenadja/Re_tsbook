@@ -19,7 +19,9 @@
     "ts-node05A":"ts-node ./TSsrc/ES6/05_abstractClass/a.ts",
     "ts-node06A":"ts-node ./TSsrc/ES6/06_module/b.ts",
     "ts-node07A":"ts-node ./TSsrc/ES6/07_typeAssertion/structuralTyping.ts",
-    "ts-node07B":"ts-node ./TSsrc/ES6/07_typeAssertion/structuralSubTyping.ts"
+    "ts-node07B":"ts-node ./TSsrc/ES6/07_typeAssertion/structuralSubTyping.ts",
+    "ts-node08A":"ts-node ./TSsrc/ES6/08_generics/a.ts",
+    "ts-node08B":"ts-node ./TSsrc/ES6/08_generics/b.ts"
   },
   "author": "junehna",
   "license": "ISC",
